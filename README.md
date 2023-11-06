@@ -1,22 +1,52 @@
-# parcial
+# Parcial - Registro de Pedidos en C++
 
-## SOLID
+Este proyecto es una aplicación de consola en C++ para registrar pedidos de artículos de clientes. Proporciona una estructura sólida y modular siguiendo los principios de diseño SOLID y GRASP.
 
-S. Responsabilidad unica: Cada clase se enfoca en una sola cosa (representar un articulo, cliente o pedido)
-O. Abierto-Cerrado: Las clases son extensibles gracias a sus interfaces
-L. Sustitucion de Liskov: Las clases concretas no hacen cosas fuera de lo esperado gracias a las interfaces y los test, lo que permite su sustitucion por cualquier otra subclase de la misma interfaz
-I. Segregacion de interfaces: No hay una super interfaz, sino que hice 3 interfaces pequeñas
-D. Inversion de dependencias: Se aplica al exigir en las ordenes de compra las interfaces de los demas objetos en vez de sus concresiones
+## Características
 
-## IOC se aplica dentro de SOLID (inversion de dependencias)
+- **Registro de Artículos:** Permite cargar información sobre artículos, incluyendo nombre e ID.
+- **Registro de Clientes:** Permite cargar información de clientes, incluyendo nombre y DNI.
+- **Registro de Pedidos:** Permite asociar clientes y artículos para crear pedidos personalizados.
 
-## RAII
+## Principios y Patrones Aplicados
 
-Se utilizan punteros inteligentes (shared_ptr) para garantizar el uso adecuado de la memoria asignada por el sistema
+- **Principios SOLID:**
 
-## GRASP
+  - **Responsabilidad Única:** Cada clase se enfoca en una única responsabilidad.
+  - **Abierto/Cerrado:** Las clases son extensibles a través de interfaces.
+  - **Sustitución de Liskov:** Las clases concretas cumplen con las interfaces y los test.
+  - **Segregación de Interfaces:** Se utilizan múltiples interfaces pequeñas.
+  - **Inversión de Dependencias (IoC):** Se aplican interfaces en lugar de implementaciones concretas.
 
-controlador: El main se encarga de la creacion de objetos para no introducir innecesariamente un builder
-Experto: Cada clase es experta y eiene la responsabilidad sobre sus propios datos y metodos
-Polimorfismo: El codigo se puede expandir facilmente gracias a las interfaces creadas
-Indireccion: Los objetos se comunican entre si mediante sus abstracciones disminuyendo el acoplamiento y agregando flexibilidad al diseño
+- **IOC se aplica dentro de SOLID (inversion de dependencias)**
+
+- **RAII (Resource Acquisition Is Initialization):**
+
+  - Se utilizan punteros inteligentes (`std::shared_ptr`) para una gestión segura de la memoria.
+
+- **Principios de GRASP:**
+  - **Controlador:** La aplicación coordina la creación de objetos sin introducir innecesariamente un Builder.
+  - **Experto:** Cada clase es experta y responsable de sus propios datos y métodos.
+  - **Polimorfismo:** El diseño permite expandirse fácilmente gracias a las interfaces.
+  - **Indirección:** Los objetos se comunican a través de sus abstracciones, disminuyendo el acoplamiento y agregando flexibilidad al diseño.
+
+## Cómo Ejecutar el Proyecto
+
+asegurate de estar posicionado dentro del directorio correspondiente al archivo que quieras ejecutar.
+
+- **Proyecto**
+  - En Windows: Ejecutar `build.bat`
+  - En Linux/Mac: Ejecutar `build.sh`
+- **Tests**
+  - En Windows: Ejecutar `build_and_execute.bat`
+  - En Linux/Mac: Ejecutar `build_and_execute.sh`
+
+Asegúrate de tener un entorno de desarrollo C++ configurado en tu sistema antes de ejecutar el proyecto.
+
+## Contribución
+
+Si deseas contribuir al proyecto, siéntete libre de abrir problemas o enviar solicitudes de extracción. ¡Estoy abierto a mejoras y sugerencias!
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia [Licencia MIT](LICENSE).
