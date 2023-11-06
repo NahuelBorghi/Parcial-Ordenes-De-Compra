@@ -13,7 +13,7 @@ g++ -Wall -std=c++11 Client.o Article.o Order.o Test.o -o Test.bin
 chmod +x ./Test.bin
 
 ## Limpio los códigos objeto
-DEL ./*.o
+rm ./*.o
 
 ## Ejecuto el binario:
 ./Test.bin

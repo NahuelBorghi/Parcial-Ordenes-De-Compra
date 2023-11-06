@@ -8,7 +8,7 @@ g++ -Wall -std=c++11 -I./include -c main.cpp
 g++ -I./include Article.o Client.o Order.o main.o -o app.bin
 
 ## Limpio los códigos objeto
-DEL ./*.o
+rm ./*.o
 
 ## Ejecuto
-app.bin
+./app.bin
