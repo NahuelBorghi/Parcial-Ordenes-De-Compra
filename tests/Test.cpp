@@ -17,7 +17,7 @@ using namespace std;
 TEST_CASE("Correct getName from Client", "[getName method]")
 {
   // Arrange                                                                      |
-  auto article1 = make_shared<Article>("Adermicina", 001);
+  chango article1 = make_shared<Article>("Adermicina", 001);
   // Act                                                                          |
   string articleName = article1->getName();
   // Assert                                                                       |
@@ -26,7 +26,7 @@ TEST_CASE("Correct getName from Client", "[getName method]")
 TEST_CASE("Correct getId from Client", "[getId method]")
 {
   // Arrange                                                                      |
-  auto article1 = make_shared<Article>("Adermicina", 002);
+  chango article1 = make_shared<Article>("Adermicina", 002);
   // Act                                                                          |
   int articleId = article1->getId();
   // Assert                                                                       |
@@ -40,7 +40,7 @@ TEST_CASE("Correct getId from Client", "[getId method]")
 TEST_CASE("Correct getName from Article", "[getName method]")
 {
   // Arrange                                                                      |
-  auto article1 = make_shared<Article>("Adermicina", 001);
+  chango article1 = make_shared<Article>("Adermicina", 001);
   // Act                                                                          |
   string articleName = article1->getName();
   // Assert                                                                       |
@@ -49,7 +49,7 @@ TEST_CASE("Correct getName from Article", "[getName method]")
 TEST_CASE("Correct getId from Article", "[getId method]")
 {
   // Arrange                                                                      |
-  auto article1 = make_shared<Article>("Adermicina", 002);
+  chango article1 = make_shared<Article>("Adermicina", 002);
   // Act                                                                          |
   int articleId = article1->getId();
   // Assert                                                                       |

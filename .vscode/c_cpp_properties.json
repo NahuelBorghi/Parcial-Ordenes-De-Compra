@@ -3,9 +3,9 @@
     {
       "name": "Win32",
       "includePath": [
-        "${workspaceFolder}/**",
-        "${workspaceFolder}/include",
-        "${workspaceFolder}/src"
+        "${workspaceFolder}\\**",
+        "${workspaceFolder}\\include",
+        "${workspaceFolder}\\src"
       ],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
       "compilerPath": "C:\\TDM-GCC-64\\bin\\gcc.exe",
