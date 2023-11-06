@@ -16,10 +16,8 @@ public:
   int getId() const;
   void setClient(shared_ptr<IClient> client);
   void append(shared_ptr<IArticle> article);
-  void showOrder();
-
   shared_ptr<IClient> getClient();
-  vector<IArticle> getArticles();
+  vector<shared_ptr<IArticle>> getArticles();
   void print();
 
 private:

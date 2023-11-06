@@ -27,3 +27,12 @@ void Order::print()
          << "\n";
   }
 }
+
+shared_ptr<IClient> Order::getClient()
+{
+  return _client;
+}
+vector<shared_ptr<IArticle>> Order::getArticles()
+{
+  return _articles;
+}

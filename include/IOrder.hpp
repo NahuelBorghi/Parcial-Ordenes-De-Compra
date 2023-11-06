@@ -12,8 +12,8 @@ public:
   virtual void append(shared_ptr<IArticle> article) = 0;
   virtual int getId() const = 0;
   virtual shared_ptr<IClient> getClient() = 0;
-  virtual vector<IArticle> getArticles() = 0;
-  virtual void showOrder() = 0;
+  virtual vector<shared_ptr<IArticle>> getArticles() = 0;
+  virtual void print() = 0;
 };
 
 #endif

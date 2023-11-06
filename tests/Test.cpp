@@ -14,7 +14,7 @@ using namespace std;
 // Client   -----------------------------------------------------------------------
 //
 
-TEST_CASE("Correct getName from Article", "[getName method]")
+TEST_CASE("Correct getName from Client", "[getName method]")
 {
   // Arrange                                                                      |
   auto article1 = make_shared<Article>("Adermicina", 001);
@@ -23,7 +23,7 @@ TEST_CASE("Correct getName from Article", "[getName method]")
   // Assert                                                                       |
   REQUIRE(articleName == "Adermicina");
 }
-TEST_CASE("Correct getId from Article", "[getId method]")
+TEST_CASE("Correct getId from Client", "[getId method]")
 {
   // Arrange                                                                      |
   auto article1 = make_shared<Article>("Adermicina", 002);
@@ -95,7 +95,7 @@ TEST_CASE("Correct Article integration in order", "[getArticle method]")
   order1->setClient(client1);
   order1->append(article1);
   // Act                                                                          |
-  vector<IArticle> orderArticle = order1->getArticles();
+  vector<shared_ptr<IArticle>> orderArticle = order1->getArticles();
   // Assert                                                                       |
-  REQUIRE(orderArticle[0].getName() == article1->getName());
+  REQUIRE(orderArticle[0]->getName() == article1->getName());
 }
