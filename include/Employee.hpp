@@ -1,15 +1,15 @@
-#ifndef CLIENT_HPP
-#define CLIENT_HPP
+#ifndef EMPLOYEE_HPP
+#define EMPLOYEE_HPP
 #pragma once
 
 #include <IPerson.hpp>
 
 using namespace std;
 
-class Client : public IPerson
+class Employee : public IPerson
 {
 public:
-  Client(string name, int dni);
+  Employee(string name, int dni);
   string getName() const;
   int getDni() const;
 

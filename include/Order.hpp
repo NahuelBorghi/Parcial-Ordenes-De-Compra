@@ -14,15 +14,18 @@ class Order : public IOrder
 public:
   Order(int id);
   int getId() const;
-  void setClient(shared_ptr<IClient> client);
+  void setClient(shared_ptr<IPerson> client);
+  void setEmployee(shared_ptr<IPerson> employee);
   void append(shared_ptr<IArticle> article);
-  shared_ptr<IClient> getClient();
+  shared_ptr<IPerson> getClient();
+  shared_ptr<IPerson> getEmployee();
   vector<shared_ptr<IArticle>> getArticles();
   void print();
 
 private:
   int _id;
-  shared_ptr<IClient> _client;
+  shared_ptr<IPerson> _client;
+  shared_ptr<IPerson> _employee;
   vector<shared_ptr<IArticle>> _articles;
 };
 
